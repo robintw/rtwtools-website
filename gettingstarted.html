@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>RTWTools - Getting Started</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/py6s.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sunburst.css">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">RTWTools</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li class="active"><a href="gettingstarted.html">Getting Started</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron header">
+      <div class="container">
+        <h1>Getting started</h1>
+      </div>
+    </div> <!-- /container -->
+
+    <div class='container'>
+      <div class="col-md-8">
+      <p>To use RTWTools you will need a copy of <a href="http://www.exelisvis.com/ProductsServices/ENVI/ENVI.aspx">ENVI</a> - one of the standard remote sensing software packages.</p>
+
+      <div class="warning"><b>Note:</b> RTWTools has not yet been upgraded to work with the new 'Toolbox' in ENVI 5.0 and newer, but will still work within the <i>ENVI Classic</i> interface that is available in these versions.</div>
+
+      <h2>Step 1: Download RTWTools</h2>
+      <p>Download the latest release of RTWTools from <a href="https://github.com/robintw/rtwtools/releases">here</a>.
+
+      <h2>Step 2: Install it</h2>
+      <p>Simply unzip the file you downloaded and copy the <code>RTWTools.sav</code> file to the ENVI <code>save_add</code> directory. This will normally be somewhere like <code>"C:\Program Files\Exelis\ENVI51\classic\save_add"</code> for ENVI 5.1 or <code>C:\Program Files\ITT\IDL708\products\envi48\save_add\</code> for ENVI 4.8.
+
+      <h2>Step 3: Load ENVI and use RTWTools</h2>
+      <p>Start ENVI as normal, and you should have a new <i>RTWTools</i> menu at the far right-hand end of the menu bar. You'll find all of the tools categorised underneath that. The interfaces to the tools are fairly self-explanatory, but if you need any help then just see the <a href="docs.html">documentation</a>.</p>
+      </div>
+    </div>
+
+
+    <div id='footer'>
+  <div class='col-md-12 text-right'>
+  <p class='vertical-align: center'>
+Kindly hosted by <a href="http://www.rackspace.com">Rackspace</a></p>
+</div>
+</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+
+    <script>
+  !function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+  </body>
+</html>

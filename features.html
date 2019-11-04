@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>RTWTools - Features</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/py6s.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sunburst.css">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">RTWTools</a></li>
+            <li class="active"><a href="features.html">Features</a></li>
+            <li><a href="gettingstarted.html">Getting Started</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron header">
+      <div class="container">
+        <h1>Features</h1>
+      </div>
+    </div> <!-- /container -->
+    <div class='container'>
+      <div class='row'>
+
+
+        <div class="col-md-6" style="vertical-align: middle">
+          <a name="helpers"></a><h2>Local Indicators of Spatial Autocorrelation</h2>
+          <p>Calculate the Getis-Ord statistic and Coefficient of Variation with a configurable window size. Importantly, this code uses the Gi* variation of the Getis-Ord statistic, which is suggested for use in remote sensing (the statistic built-in to ENVI runs the Gi method instead).</p>
+       </div>
+       <div class="col-md-6 text-center" style="vertical-align: middle">
+        <img height="200px" src="Getis.png" title="Getis image over an industrial estate in Andover. Pure blue and pure red are bright and dark uniform areas respectively.">
+       </div>
+      </div>
+      <hr>
+      <div class='row'>
+        <div class="col-md-6" style="vertical-align: middle">
+          <a id="rois"></a><h2>ROI Manipulation</h2>
+          <p>ROIs in ENVI are very useful, but there are some things that ENVI doesn't let you do. That's where RTWTools comes in: you can shrink and grow ROIs (particularly useful for removing adjacency effects), translate them (in x and y directions) and calculate statistics over all the pixels within them. The latter function allows far more detailed statistics than ENVI provides by default, including summing all the pixels in an ROI (particularly useful when combined with the surface area tools below).
+          </p>
+       </div>
+       <div class="col-md-6 text-center" style="vertical-align: middle">
+          <img height=200px src="ROIs.png" title="Original ROI (shaded) and ROI translated 100 pixels in the X direction (solid)">
+       </div>
+      </div>
+      <hr>
+      <div class='row'>
+        <div class="col-md-6" style="vertical-align: middle">
+          <a id="others"></a><h2>Estimate 3D surface area</h2>
+          <p>Normally when calculating the surface area of a feature from a DEM or satellite image we simply sum the nominal surface area of the pixels covering it. However, this can give incorrect results as, for example, a large hemispherical hill has a much larger surface area than a flat area of the same size. These functions allow estimation of the 3D surface area from a DEM, plus calculation of the 3D:2D surface area ratio (which is a measure of topographic roughness).
+</pre>
+       </div>
+       <div class="col-md-6 text-center" style="vertical-align: middle">
+         <img height=200px src="3dSA_ROI.png" title="Calculation of the 3D surface area of an ROI using the ROI statistics tool combined with the 3D Surface Area Estimation tool">
+       </div>
+     </div>
+     <hr>
+      <div class='row'>
+        <div class="col-md-6" style="vertical-align: middle">
+          <h2>And more...</h2>
+          <p>RTWTools provides a tool which extends the <i>Band Threshold to ROI</i> tool to do a percentile threshold, thus allowing ROIs to be created using criteria such as the top 5% of pixels in a band (particularly useful when applied to Getis images to select uniform areas). There is also a tool available for creating GLT images for further processing in ATCOR and AZGCORR
+          </p>
+       </div>
+       <div class="col-md-6 text-center" style="vertical-align: middle" title="Identification of bright uniform (red) and dark uniform (green) areas of an image using the Getis function combined with the Band Percentile Threshold to ROI function">
+        <img height="200px" src="PercThresh.png">
+       </div>
+     </div>
+    </div>
+
+    <div id='footer'>
+  <div class='col-md-12 text-right'>
+  <p class='vertical-align: center'>
+Kindly hosted by <a href="http://www.rackspace.com">Rackspace</a></p>
+</div>
+</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+
+    <script>
+  !function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+  </body>
+</html>
